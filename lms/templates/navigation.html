@@ -55,7 +55,7 @@ site_status_msg = get_site_status_msg(course_id)
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">
-          <img src="${static.url('images/espol-logo.png')}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+          <img src="${static.url('images/logo.png')}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
         </%block>
       </a>
     </h1>
@@ -78,7 +78,7 @@ site_status_msg = get_site_status_msg(course_id)
         <%block name="navigation_global_links_authenticated">
           % if settings.FEATURES.get('COURSES_ARE_BROWSABLE') and not show_program_listing:
             <li class="item nav-global-01">
-              <a href="${marketing_link('COURSES')}">${_('Explore courses')}</a>
+              <a href="${marketing_link('COURSES')}">${_('Explore coursessassdasad')}</a>
             </li>
           % endif
           % if show_program_listing:
@@ -137,11 +137,6 @@ site_status_msg = get_site_status_msg(course_id)
 
         <%block name="navigation_other_global_links">
           % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
-            % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
-              <li class="item nav-global-05">
-                <a class="btn" href="/courses">${_("Explore Courses")}</a>
-              </li>
-            %endif
             % if False:
                 % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
                    <li class="item nav-global-04">
