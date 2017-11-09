@@ -9,6 +9,16 @@
 
 ======================================================== */
 
+// dashboard wrapper backgrounds
+body.view-dashboard .content-wrapper {
+  background: $transparent;
+}
+
+.dashboard {
+  margin-top: 40px;
+  padding: 20px 20px 0;
+}
+
 // couseware wrapper alignmed
 body.view-in-course .container {
   padding: 0;
