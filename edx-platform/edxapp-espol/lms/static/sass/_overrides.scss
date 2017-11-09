@@ -41,6 +41,12 @@ body header.header-global.slim {
   }
 }
 
+.home > header {
+  background-color: #006699;
+  background: url("../images/hero-home-page.jpg") center center;
+  background-size: cover;
+}
+
 // dashboard wrapper backgrounds
 body .content-wrapper {
   background: $transparent !important;
@@ -65,4 +71,18 @@ body.view-in-course .container {
     border-bottom: 1px solid #d9d9d9;
     max-width: 100%;
   }
+}
+
+// course about
+.course-info header {
+  height: auto !important;
+  margin-bottom: 40px;
+  padding: 40px !important;
+}
+.course-info .container {
+  padding: 40px 20px;
+}
+
+.course-info .course-sidebar header::after {
+  left: 0;
 }
