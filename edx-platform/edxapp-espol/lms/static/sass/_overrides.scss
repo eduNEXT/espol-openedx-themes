@@ -42,8 +42,8 @@ body header.header-global.slim {
 }
 
 // dashboard wrapper backgrounds
-body.view-dashboard .content-wrapper {
-  background: $transparent;
+body .content-wrapper {
+  background: $transparent !important;
 }
 
 .dashboard {
