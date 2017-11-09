@@ -8,6 +8,38 @@
   overrides for common elemnts: [header, footer etc]
 
 ======================================================== */
+// header arrangements to imitate lms v2 (pattern library)
+body header.header-global,
+body header.header-global.slim {
+  height: auto;
+  padding: 0;
+  border-bottom: 1px solid #a1a5a5;
+
+  .wrapper-header {
+    height: 60px;
+    padding: 10px 10px 0;
+  }
+
+  .logo img {
+    height: 30px;
+    margin-top: 4px;
+  }
+
+  .wrapper-user-menu {
+    margin-top: 0;
+  }
+
+  .dropdown-menu-container .menu-button {
+    text-shadow: none;
+    box-shadow: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: none;
+    }
+  }
+}
 
 // dashboard wrapper backgrounds
 body.view-dashboard .content-wrapper {
