@@ -18,6 +18,11 @@ from status.status import get_site_status_msg
 from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled, released_languages
 %>
 
+## Force pattern library in header for all pages
+<%
+uses_pattern_library = True
+%>
+
 ## Provide a hook for themes to inject branding on top.
 <%block name="navigation_top" />
 
