@@ -52,6 +52,10 @@ body .content-wrapper {
   background: $transparent !important;
 }
 
+body.index .content-wrapper {
+  max-width: none;
+}
+
 .dashboard {
   margin-top: 40px;
   padding: 20px 20px 0;
