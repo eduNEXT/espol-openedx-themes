@@ -12,59 +12,13 @@ from django.conf import settings
 <%block name="pagetitle">${_("Contact Us")}</%block>
 
 <div class="page-heading">
-  <h1>${_("Contact Us")}</h1>
 </div>
 
 <section class="static-content">
   <div class="grid-manual grid-container">
     <div class="inner-container">
       <div class="row">
-        <div class="col col-12 sm-col-10 md-col-8 lg-col-6 xl-col-6 col-centered">
-          <form id="contact_form" class="form-block">
-            <div class="input-group">
-              <label for="">Email*</label>
-              <input type="text" class="input-lg" id="email">
-            </div>
-            <div class="input-group">
-              <label for="">Full Name*</label>
-              <input type="text" class="input-lg" id="name">
-            </div>
-            <div class="input-group">
-              <label for="">I am a</label>
-              <div class="custom-select">
-                <select name="user_type" id="user_type" class="input-lg">
-                  <option value="">Select</option>
-                  <option value="learner">Learner</option>
-                  <option value="teacher">Teacher</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="">Inquiry Type*</label>
-              <div class="custom-select">
-                <select id="subject" class="input-lg">
-                  <option value="">Select</option>
-                  <option value="payments">Payments</option>
-                  <option value="certificates">Certificates</option>
-                  <option value="assessments">Assessments</option>
-                  <option value="videos">Videos</option>
-                  <option value="discussion-forums">Discussion Forums</option>
-                  <option value="mobile-application">Mobile Application</option>
-                </select>
-              </div>
-            </div>
-            <div class="input-group">
-              <label for="">Message*</label>
-              <textarea id="details" rows="10"></textarea>
-            </div>
-            <input type="text" name="issue_type" id="issue_type" value="contact" class="hidden">
-            <button class="btn-brand btn-client btn-lg" id="submit_btn">Submit</button>
-            <div class="input-group">
-              <label for="" class="text-light">* Required Fields</label>
-            </div>
-          </form>
-        </div>
+        <div class="col col-12 sm-col-10 md-col-8 lg-col-6 xl-col-6 col-centered"></div>
       </div>
     </div>
   </div>

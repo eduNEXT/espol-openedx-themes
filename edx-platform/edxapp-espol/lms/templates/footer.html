@@ -80,7 +80,7 @@
               ## can be included in the footer on other sites
               ## (e.g. a blog or marketing front-end) to provide a consistent
               ## user experience.  See the branding app for details.
-              <img alt="organization logo" src="${footer['logo_image']}">
+              <img alt="organization logo" src="${static.url('images/logo-white.png')}">
             </a>
           </p>
 </div>
@@ -114,6 +114,11 @@
       <p>
         <a href="${footer['openedx_link']['url']}">
           <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
+        </a>
+      </p>
+      <p>
+        <a href="#">
+          <img src="${static.url('images/logo-small.png')}" alt="eduNEXT" width="82" />
         </a>
       </p>
     </div>

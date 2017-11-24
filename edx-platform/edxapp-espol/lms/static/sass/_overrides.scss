@@ -1,3 +1,137 @@
+/*=====================================================
+  Name = espol theme
+  Author = @edunext | Miguel López - @Icemberth
+
+  Description
+  --------------------------------
+  overrides for common elements: [header, footer, etc]
+========================================================*/
+$main-color: #001c43;
+$hover-color: #1f457b;
+$secondary-color: #eaa932;
+
+.btn-default{
+  box-sizing: border-box;
+  transition: color 0.25s ease-in-out,background 0.25s ease-in-out,box-shadow 0.25s ease-in-out;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-shadow: none;
+  font-weight: 500;
+  letter-spacing: 0;
+  box-shadow: 0 2px 1px 0 #0a4a67;
+  background: #126f9a;
+  color: #fff;
+}
+a{
+  color: $main-color;
+}
+h1 {
+  font-size: 1.5rem;
+}
+.page-heading {
+  padding: 30px 10px 10px 10px;
+}
+.header-global .nav-courseware li .btn{
+  box-shadow: 0 2px 1px 0 $secondary-color;
+  background: $main-color;
+}
+.header-global .nav-courseware li .btn:hover{
+  background: $hover-color;
+}
+.footer-about-openedx p{
+  // margin: 1.2rem 0 0 0;
+  margin: 0 0 0 0 !important;
+}
+.footer-about-openedx a {
+  display: block !important;
+  float: none !important;
+}
+.wrapper-footer{
+  background: #5B5B5F;
+
+  footer#footer-openedx .copyright{
+    color: white;
+  }
+  footer#footer-openedx ul a{
+    color: white;
+  }
+  footer#footer-openedx a:hover{
+    border-bottom: 1px dotted white;
+  }
+}
+.home > header .title .course-search .search-button{
+  border: 2px solid $main-color;
+  background: $main-color;
+  box-shadow: none;
+}
+
+#global-navigation{
+  border-bottom: 2px solid $main-color;
+  // provisional
+  // box-shadow: 0px 0px 0px 0px white, 0px 2px 0px 0px #eaa834;
+}
+.header-global{
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
+  background: #fff;
+  position: relative;
+  width: 100%;
+  height: 76px !important;
+}
+
+.header-global .wrapper-header .list-inline .item{
+  text-transform: none;
+}
+
+// Login CSS
+.login-register .action-primary{
+  background: $main-color;
+  box-shadow: 0 2px 1px 0 $secondary-color;
+
+  &:hover{
+    background: $hover-color;
+  }
+}
+.login-register-content h2{
+  color: $main-color;
+}
+.login-register .form-field .field-link{
+  color: $main-color;
+}
+// Curses
+.courses-container .courses .course{
+  border-bottom: 3px solid $main-color;
+}
+.courses-container .courses .course .course-image .cover-image .learn-more{
+  border-color: $main-color;
+  background: $main-color;
+}
+.courses-container .courses .course .course-info .course-title{
+  color: $main-color;
+}
+.course-info .register{
+  @extend .btn-default;
+}
+// password reset confirm
+.content-wrapper{
+  text-align: center;
+}
+// dashboard
+a, a:visited{
+  color: $main-color;
+}
+.header-global .nav-global li a{
+  color: $main-color
+}
+.search-bar .search-button{
+  background: $main-color;
+  &:hover{
+    background: $hover-color;
+  }
+}
 /* ========================================================
   Name = espol theme
   Author = @edunext | Daniel Naranjo - @Bound3R
@@ -16,12 +150,12 @@ body header.header-global.slim {
   border-bottom: 1px solid #a1a5a5;
 
   .wrapper-header {
-    height: 60px;
-    padding: 10px 10px 0;
+    height: 40px;
+    padding: 18px 10px 0;
   }
 
   .logo img {
-    height: 30px;
+    // height: 30px;
     margin-top: 4px;
   }
 
