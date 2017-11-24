@@ -11,20 +11,20 @@ $hover-color: #1f457b;
 $secondary-color: #eaa932;
 
 .btn-default{
-  box-sizing: border-box;
-  transition: color 0.25s ease-in-out,background 0.25s ease-in-out,box-shadow 0.25s ease-in-out;
-  display: inline-block;
+  box-sizing: border-box !important;
+  transition: color 0.25s ease-in-out,background 0.25s ease-in-out,box-shadow 0.25s ease-in-out !important;
+  display: inline-block !important;
   cursor: pointer;
   text-decoration: none;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
+  border: none !important;
+  padding: 10px 20px !important;
+  text-align: center !important;
   text-shadow: none;
-  font-weight: 500;
-  letter-spacing: 0;
-  box-shadow: 0 2px 1px 0 #0a4a67;
-  background: #126f9a;
-  color: #fff;
+  /* font-weight: 500; */
+  letter-spacing: 0 !important;
+  box-shadow: 0 2px 1px 0 $secondary-color !important;
+  background: $main-color !important;
+  color: white !important;
 }
 a{
   color: $main-color;
@@ -42,15 +42,18 @@ h1 {
 .header-global .nav-courseware li .btn:hover{
   background: $hover-color;
 }
+body header.header-global .logo img{
+  height: 30px;
+}
 .footer-about-openedx p{
   // margin: 1.2rem 0 0 0;
   margin: 0 0 0 0 !important;
+  text-align: right;
 }
 .footer-about-openedx a {
   display: block !important;
   float: none !important;
 }
-
 .wrapper-footer{
   background: #5B5B5F;
 
@@ -63,7 +66,27 @@ h1 {
   footer#footer-openedx a:hover{
     border-bottom: 1px dotted white;
   }
+  .social-feed {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: flex-end;
+    margin-top: 15%;
+
+    a{
+      color: white !important;
+      font-size: 1.6rem;
+      width: 15%;
+      cursor: pointer;
+    }
+
+    a:hover{
+      color: #878788 !important;
+    }
+  }
 }
+
 .home > header .title .course-search .search-button{
   border: 2px solid $main-color;
   background: $main-color;
@@ -86,7 +109,23 @@ h1 {
 .header-global .wrapper-header .list-inline .item{
   text-transform: none;
 }
-
+.header-global .wrapper-header .wrapper-user-menu {
+  margin-top: 4px !important;
+}
+.header-global.slim .wrapper-header .list-inline.nav-global{
+  margin-top: 16px !important
+}
+.header-global .wrapper-header .course-header {
+  max-width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  margin-top: 16px !important;
+}
+.heading-group button{
+  display: none;
+}
 // Login CSS
 .login-register .action-primary{
   background: $main-color;
@@ -113,10 +152,27 @@ h1 {
 .courses-container .courses .course .course-info .course-title {
   color: $main-color;
 }
+.course-info .heading-group{
+  text-align: left;
+}
 .course-info .register {
   @extend .btn-default;
+  width: 45% !important;
+  text-transform: capitalize !important;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong{
+  @extend .btn-default;
+
+  width: 45% !important;
+  text-transform: capitalize !important;
+  font-size: 16px;
+  padding-top: 5px !important;
+  height: 36px;
 }
 .action-show-bookmarks {
+  text-align: left;
+}
+div.info-wrapper section.handouts a{
   text-align: left;
 }
 // password reset confirm
@@ -156,6 +212,7 @@ body header.header-global.slim {
   .wrapper-header {
     height: 40px;
     padding: 18px 10px 0;
+
   }
 
   .logo img {
@@ -163,9 +220,7 @@ body header.header-global.slim {
     margin-top: 4px;
   }
 
-  .wrapper-user-menu {
-    margin-top: 0;
-  }
+
 
   .dropdown-menu-container .menu-button {
     text-shadow: none;
