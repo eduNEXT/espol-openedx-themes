@@ -10,6 +10,7 @@ $main-color: #001c43;
 $hover-color: #1f457b;
 $secondary-color: #eaa932;
 
+// TODO: revisar este color de background
 .btn-default{
   box-sizing: border-box;
   transition: color 0.25s ease-in-out,background 0.25s ease-in-out,box-shadow 0.25s ease-in-out;
@@ -22,12 +23,19 @@ $secondary-color: #eaa932;
   text-shadow: none;
   font-weight: 500;
   letter-spacing: 0;
-  box-shadow: 0 2px 1px 0 #0a4a67;
-  background: #126f9a;
+  box-shadow: 0 2px 1px 0 $secondary-color;
+  background: $main-color;
   color: #fff;
+}
+.btn{
+  border-color: $main-color;
+  color: $main-color;
 }
 a{
   color: $main-color;
+  &:hover{
+    color: $hover-color;
+  }
 }
 h1 {
   font-size: 1.5rem;
@@ -54,13 +62,13 @@ h1 {
   background: #5B5B5F;
 
   footer#footer-openedx .copyright{
-    color: white;
+    color: white !important;
   }
   footer#footer-openedx ul a{
-    color: white;
+    color: white !important;
   }
   footer#footer-openedx a:hover{
-    border-bottom: 1px dotted white;
+    border-bottom: 1px dotted white !important;
   }
 }
 .home > header .title .course-search .search-button{
@@ -84,6 +92,16 @@ h1 {
 
 .header-global .wrapper-header .list-inline .item{
   text-transform: none;
+}
+.header-global.slim .course-header{
+  width: 60%;
+}
+.header-global .wrapper-header .wrapper-user-menu{
+  line-height: 22.4px;
+  margin-top: 0px;
+}
+.doc-link{
+  line-height: 14px !important;
 }
 
 // Login CSS
@@ -115,6 +133,46 @@ h1 {
 .course-info .register{
   @extend .btn-default;
 }
+.course-outline .block-tree .section ol.outline-item .subsection:hover{
+  border: 1px solid $main-color;
+}
+.btn-link{
+  color: $main-color;
+}
+.dashboard .my-courses .course .details .enter-course{
+  color: $main-color;
+  border: solid 1px $main-color;
+  &:hover{
+    background-color: $hover-color;
+  }
+}
+div.info-wrapper section.handouts a{
+  color: $main-color;
+}
+div.info-wrapper section.handouts ol li a{
+  color: $main-color;
+}
+.wrapper-course-material .course-tabs li a:hover{
+  color: $main-color;
+  border-bottom-color: $main-color;
+}
+.tabs .tab a.active{
+  border-bottom-color: $main-color !important;
+  &:hover{
+    border-bottom: $main-color;
+  }
+}
+.content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>*:first-child{
+  color: white !important;
+  background: $main-color;
+  &:hover{
+    background: $hover-color;
+  }
+}
+.btn-brand{
+  border-color: $main-color;
+  background: $main-color;
+}
 // password reset confirm
 // Removed by fmo, because the implications are too broad
 // .content-wrapper{
@@ -122,7 +180,7 @@ h1 {
 // }
 // dashboard
 a, a:visited{
-  color: $main-color;
+  color: $main-color !important;
 }
 .header-global .nav-global li a{
   color: $main-color
@@ -130,7 +188,7 @@ a, a:visited{
 .search-bar .search-button{
   background: $main-color;
   &:hover{
-    background: $hover-color;
+    background: $hover-color !important;
   }
 }
 /* ========================================================
