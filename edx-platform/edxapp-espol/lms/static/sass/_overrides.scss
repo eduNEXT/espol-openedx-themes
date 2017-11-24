@@ -50,6 +50,7 @@ h1 {
   display: block !important;
   float: none !important;
 }
+
 .wrapper-footer{
   background: #5B5B5F;
 
@@ -98,22 +99,25 @@ h1 {
 .login-register-content h2{
   color: $main-color;
 }
-.login-register .form-field .field-link{
+.login-register .form-field .field-link {
   color: $main-color;
 }
 // Curses
-.courses-container .courses .course{
+.courses-container .courses .course {
   border-bottom: 3px solid $main-color;
 }
-.courses-container .courses .course .course-image .cover-image .learn-more{
+.courses-container .courses .course .course-image .cover-image .learn-more {
   border-color: $main-color;
   background: $main-color;
 }
-.courses-container .courses .course .course-info .course-title{
+.courses-container .courses .course .course-info .course-title {
   color: $main-color;
 }
-.course-info .register{
+.course-info .register {
   @extend .btn-default;
+}
+.action-show-bookmarks {
+  text-align: left;
 }
 // password reset confirm
 .content-wrapper{
