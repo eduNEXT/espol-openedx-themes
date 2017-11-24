@@ -11,7 +11,7 @@ $hover-color: #1f457b;
 $secondary-color: #eaa932;
 
 // TODO: revisar este color de background
-.btn-default{
+.btn-default {
   box-sizing: border-box;
   transition: color 0.25s ease-in-out,background 0.25s ease-in-out,box-shadow 0.25s ease-in-out;
   display: inline-block;
@@ -30,6 +30,10 @@ $secondary-color: #eaa932;
 .btn{
   border-color: $main-color;
   color: $main-color;
+  &:hover {
+    border-color: $main-color;
+    background: $main-color;
+  }
 }
 a{
   color: $main-color;
@@ -159,8 +163,12 @@ div.info-wrapper section.handouts ol li a{
 .tabs .tab a.active{
   border-bottom-color: $main-color !important;
   &:hover{
-    border-bottom: $main-color;
+    border-bottom: $main-color !important;
   }
+}
+.tabs .tab a:hover{
+  border-bottom-color: $main-color !important;
+  color: $main-color !important;
 }
 .content-wrapper .page-header.has-secondary .page-header-secondary .form-actions>*:first-child{
   color: white !important;
