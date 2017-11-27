@@ -1,7 +1,6 @@
 /*=====================================================
   Name = espol theme
   Author = @edunext | Miguel López - @Icemberth
-
   Description
   --------------------------------
   overrides for common elements: [header, footer, etc]
@@ -9,22 +8,22 @@
 $main-color: #001c43;
 $hover-color: #1f457b;
 $secondary-color: #eaa932;
+$screen-sm-max: 600px;
 
 .btn-default{
-  box-sizing: border-box;
-  transition: color 0.25s ease-in-out,background 0.25s ease-in-out,box-shadow 0.25s ease-in-out;
-  display: inline-block;
+  box-sizing: border-box !important;
+  transition: color 0.25s ease-in-out,background 0.25s ease-in-out,box-shadow 0.25s ease-in-out !important;
+  display: inline-block !important;
   cursor: pointer;
   text-decoration: none;
-  border: none;
-  padding: 10px 20px;
-  text-align: center;
+  border: none !important;
+  padding: 10px 20px !important;
+  text-align: center !important;
   text-shadow: none;
-  font-weight: 500;
-  letter-spacing: 0;
-  box-shadow: 0 2px 1px 0 #0a4a67;
-  background: #126f9a;
-  color: #fff;
+  letter-spacing: 0 !important;
+  box-shadow: 0 2px 1px 0 $secondary-color !important;
+  background: $main-color !important;
+  color: white !important;
 }
 a{
   color: $main-color;
@@ -42,9 +41,17 @@ h1 {
 .header-global .nav-courseware li .btn:hover{
   background: $hover-color;
 }
+body header.header-global .logo img{
+  height: 30px;
+}
+.footer-about-openedx{
+  @media (max-width: $screen-sm-max) {
+    margin-top: 10px;
+  }
+}
 .footer-about-openedx p{
-  // margin: 1.2rem 0 0 0;
   margin: 0 0 0 0 !important;
+  text-align: right;
 }
 .footer-about-openedx a {
   display: block !important;
@@ -62,7 +69,36 @@ h1 {
   footer#footer-openedx a:hover{
     border-bottom: 1px dotted white;
   }
+  .social-feed {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: flex-end;
+    margin-top: 15%;
+
+    @media (max-width: $screen-sm-max) {
+      display: flex;
+      width: 100%;
+      align-content: space-between;
+      justify-content: center;
+      margin-top: 15%;
+      text-align: center;
+    }
+
+    a{
+      color: white !important;
+      font-size: 1.6rem;
+      width: 15%;
+      cursor: pointer;
+    }
+
+    a:hover{
+      color: #878788 !important;
+    }
+  }
 }
+
 .home > header .title .course-search .search-button{
   border: 2px solid $main-color;
   background: $main-color;
@@ -71,21 +107,74 @@ h1 {
 
 #global-navigation{
   border-bottom: 2px solid $main-color;
-  // provisional
-  // box-shadow: 0px 0px 0px 0px white, 0px 2px 0px 0px #eaa834;
 }
 .header-global{
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
   background: #fff;
   position: relative;
   width: 100%;
+  // TODO: be careful with this rule, can affect more than 1 thing that you thing.
   height: 76px !important;
+
+  .wrapper-header {
+    @media (max-width: $screen-sm-max) {
+      height: auto !important;
+      padding-top: 5px;
+    }
+  }
+  .logo-header {
+  }
+  @media (max-width: $screen-sm-max) {
+    text-align: center;
+  }
+  .nav-courseware{
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+      margin-top: 45px;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
 }
 
-.header-global .wrapper-header .list-inline .item{
-  text-transform: none;
+.header-global .nav-courseware li .btn{
+  @media (max-width: $screen-sm-max) {
+    font-size: .7em;
+  }
 }
+.header-global .wrapper-header .wrapper-user-menu {
+  margin-top: 4px !important;
+}
+.header-global.slim .wrapper-header .list-inline.nav-global{
+  margin-top: 16px !important;
 
+  @media (max-width: $screen-sm-max) {
+    padding-left: 31px;
+  }
+}
+.header-global .wrapper-header .logo{
+  @media (max-width: $screen-sm-max) {
+    position: absolute;
+    top: -8px;
+  }
+}
+.header-global .wrapper-header .course-header {
+  max-width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  // TODO: be careful with this rule, can affect more than 1 thing that you thing.
+  margin-top: 16px !important;
+}
+.wrapper-footer footer#footer-openedx p{
+  @media (max-width: $screen-sm-max) {
+    text-align: center;
+  }
+}
+.heading-group button{
+  display: none;
+}
 // Login CSS
 .login-register .action-primary{
   background: $main-color;
@@ -98,26 +187,92 @@ h1 {
 .login-register-content h2{
   color: $main-color;
 }
-.login-register .form-field .field-link{
+.login-register .form-field .field-link {
   color: $main-color;
 }
 // Curses
-.courses-container .courses .course{
+.courses-container .courses .course {
   border-bottom: 3px solid $main-color;
 }
-.courses-container .courses .course .course-image .cover-image .learn-more{
+.courses-container .courses .course .course-image .cover-image .learn-more {
   border-color: $main-color;
   background: $main-color;
 }
-.courses-container .courses .course .course-info .course-title{
+.courses-container .courses .course .course-info .course-title {
   color: $main-color;
 }
-.course-info .register{
-  @extend .btn-default;
+
+.course-info .container{
+  @media(max-width: $screen-sm-max) {
+    width:100%;
+    min-width: initial;
+  }
 }
-// password reset confirm
-.content-wrapper{
-  text-align: center;
+.course-info .details{
+  @media (max-width: $screen-sm-max) {
+    width: 100%;
+  }
+}
+.course-info .course-sidebar{
+  @media (max-width: $screen-sm-max) {
+    width: 100%;
+  }
+}
+.course-info .heading-group{
+  text-align: left;
+}
+.course-info header.course-profile .intro-inner-wrapper{
+  max-width: none !important;
+  min-width: initial !important;
+}
+.course-info .register {
+  @extend .btn-default;
+
+  @media (max-width: $screen-sm-max) {
+    width: 100% !important;
+    display: block !important;
+    margin-top: 5px;
+  }
+
+  width: 45% !important;
+  text-transform: capitalize !important;
+}
+.course-info header.course-profile .intro-inner-wrapper .intro{
+  @media(max-width: $screen-sm-max) {
+    display: block !important;
+    width: 100%;
+  }
+}
+.course-info header.course-profile .intro-inner-wrapper .media{
+  @media(max-width: $screen-sm-max) {
+    display: block !important;
+    width: 100%;
+  }
+}
+.course-info header.course-profile .intro-inner-wrapper .intro .main-cta strong{
+  @extend .btn-default;
+
+  @media (max-width: $screen-sm-max) {
+    width: 100% !important;
+    display: block !important;
+    margin-top: 5px;
+  }
+
+  width: 45% !important;
+  text-transform: capitalize !important;
+  font-size: 16px;
+  padding-top: 5px !important;
+  height: 36px;
+}
+.action-show-bookmarks {
+  text-align: left;
+}
+div.info-wrapper section.handouts a{
+  text-align: left;
+  color: $main-color;
+}
+div.info-wrapper section.handouts ol li a{
+  color: $main-color;
 }
 // dashboard
 a, a:visited{
@@ -125,6 +280,32 @@ a, a:visited{
 }
 .header-global .nav-global li a{
   color: $main-color
+}
+.dashboard .my-courses .course .details .enter-course{
+  color: $main-color;
+  border-color: $main-color;
+
+  &:hover{
+    background-color: $main-color;
+    color: #FFF !important
+  }
+}
+.find-courses .filters .clear-filters{
+  color: $main-color;
+}
+.find-courses .search-facets .facet-option:hover{
+  background: $main-color;
+}
+.find-courses .discovery-input:focus{
+  border-color: $main-color;
+}
+.find-courses .discovery-submit{
+  border: solid 2px $main-color;
+  background: $main-color;
+
+  &:hover{
+    background: $hover-color;
+  }
 }
 .search-bar .search-button{
   background: $main-color;
@@ -136,11 +317,9 @@ a, a:visited{
   Name = espol theme
   Author = @edunext | Daniel Naranjo - @Bound3R
   Web = edunext.co
-
   Description
   -------------------------------------------------------
   overrides for common elemnts: [header, footer etc]
-
 ======================================================== */
 // header arrangements to imitate lms v2 (pattern library)
 body header.header-global,
@@ -152,6 +331,7 @@ body header.header-global.slim {
   .wrapper-header {
     height: 40px;
     padding: 18px 10px 0;
+
   }
 
   .logo img {
@@ -159,9 +339,8 @@ body header.header-global.slim {
     margin-top: 4px;
   }
 
-  .wrapper-user-menu {
-    margin-top: 0;
-  }
+
+
 
   .dropdown-menu-container .menu-button {
     text-shadow: none;
@@ -194,6 +373,7 @@ body.index .content-wrapper {
   margin-top: 40px;
   padding: 20px 20px 0;
 }
+
 
 // couseware wrapper alignmed
 body.view-in-course .container {
