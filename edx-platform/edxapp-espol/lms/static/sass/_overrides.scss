@@ -34,6 +34,13 @@ h1 {
 .page-heading {
   padding: 30px 10px 10px 10px;
 }
+// .header-global .nav-courseware li{
+//   @media (max-width: $screen-sm-max) {
+//     padding: 10px !important;
+//     background: red !important;
+//   }
+// }
+
 .header-global .nav-courseware li .btn{
   box-shadow: 0 2px 1px 0 $secondary-color;
   background: $main-color;
