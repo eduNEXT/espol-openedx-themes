@@ -116,9 +116,10 @@ h1 {
   @extend .btn-default;
 }
 // password reset confirm
-.content-wrapper{
-  text-align: center;
-}
+// Removed by fmo, because the implications are too broad
+// .content-wrapper{
+  // text-align: center;
+// }
 // dashboard
 a, a:visited{
   color: $main-color;
