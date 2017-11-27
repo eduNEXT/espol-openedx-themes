@@ -86,11 +86,19 @@
 </div>
 
       ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
- <p class="copyright">${footer['copyright']} ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}</p>
+ <p class="copyright">
+   Escuela Superior Politécnica del Litoral - Campus Gustavo Galindo - Guayaquil - Ecuador © El contenido de esta obra es de propiedad intelectual de la ESPOL. Todos los derechos reservados. Prohibida su reproducción total o parcial, comunicación pública o distribución sin autorización previa del titular de los derechos
+ </p>
       <nav class="nav-legal" aria-label="${_('Legal')}">
         <ul>
             <li class="nav-legal-01">
-              <a href="http://200.10.150.66/faq">${_("Preguntas frecuentes")}</a>
+              <a href="https://virtual.espol.edu.ec/contact">Contáctenos</a>
+            </li>
+            <li class="nav-legal-01">
+              <a href="https://virtual.espol.edu.ec/about">Acerca de</a>
+            </li>
+            <li class="nav-legal-01">
+              <a href="https://virtual.espol.edu.ec/about">Preguntas frecuentes</a>
             </li>
             <li class="nav-legal-02">
               <a href="mailto:ayudaedxespol@espol.edu.ec">${_("Reportar Errores")}</a>
@@ -117,10 +125,27 @@
         </a>
       </p>
       <p>
-        <a href="#">
-          <img src="${static.url('images/logo-small.png')}" alt="eduNEXT" width="82" />
+        <a href="https://www.edunext.co/es/" target="_blank">
+          <img src="${static.url('images/logo-small-light.png')}" alt="eduNEXT" width="82" />
         </a>
       </p>
+      <section class="social-feed">
+        <a href="https://twitter.com/espol" target="_blank">
+          <span class="icon fa fa-twitter" aria-hidden="true"></span>
+        </a>
+        <a href="https://www.facebook.com/espol/" target="_blank">
+          <span class="icon fa fa-facebook" aria-hidden="true"></span>
+        </a>
+        <a href="https://www.linkedin.com/company/espol" target="_blank">
+          <span class="icon fa fa-linkedin" aria-hidden="true"></span>
+        </a>
+        <a href="https://www.youtube.com/channel/UCxWAiJzpSMZ5EHELK0GI71w" target="_blank">
+          <span class="icon fa fa-youtube" aria-hidden="true"></span>
+        </a>
+        <a href="https://www.instagram.com/espol1/" target="_blank">
+          <span class="icon fa fa-instagram" aria-hidden="true"></span>
+        </a>
+      </section>
     </div>
     % endif
   </footer>
