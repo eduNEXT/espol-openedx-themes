@@ -98,6 +98,7 @@ body header.header-global .logo img{
   background: #fff;
   position: relative;
   width: 100%;
+  // TODO: be careful with this rule, can affect more than 1 thing that you thing.
   height: 76px !important;
 }
 
@@ -116,6 +117,7 @@ body header.header-global .logo img{
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 15px;
+  // TODO: be careful with this rule, can affect more than 1 thing that you thing.
   margin-top: 16px !important;
 }
 .heading-group button{
@@ -188,6 +190,23 @@ a, a:visited{
   &:hover{
     background-color: $main-color;
     color: #FFF !important
+  }
+}
+.find-courses .filters .clear-filters{
+  color: $main-color;
+}
+.find-courses .search-facets .facet-option:hover{
+  background: $main-color;
+}
+.find-courses .discovery-input:focus{
+  border-color: $main-color;
+}
+.find-courses .discovery-submit{
+  border: solid 2px $main-color;
+  background: $main-color;
+
+  &:hover{
+    background: $hover-color;
   }
 }
 .search-bar .search-button{
