@@ -431,3 +431,8 @@ section.outside-app h1 {
   right: -8px !important;
   z-index: 9999999 !important;
 }
+
+// Fix calculator with invisible input
+.calc-main #calculator_wrapper form .input-wrapper #calculator_input {
+  color: #222;
+}
