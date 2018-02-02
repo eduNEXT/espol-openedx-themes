@@ -438,6 +438,7 @@ section.outside-app h1 {
 }
 
 // Remove from view the stange bug in ORA added by https://github.com/edx/edx-ora2/commit/7568a7008706db6fee5d3081e455b6687d84d659
-.submission__answer__display__file .submission__answer__file__block:not(:first-child) {
+.submission__answer__files .submission__answer__file__block:not(:first-child) {
     display: none !important;
 }
+
